@@ -5,7 +5,7 @@ A react wrapper for the [Swapy](https://swapy.tahazsh.com/) library by [TahaSh](
 ## Installation
 
 ```bash
-npm install react-swapy
+npm install react-swapy -S
 ```
 
 ## Usage 
