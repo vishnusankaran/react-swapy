@@ -39,7 +39,8 @@ const Component = () => {
 
 > Make sure to add styles for your slots and items through `className` prop for each component, as some properties of the inline `style` props is getting overridden.
 
-#### Props
+
+## Props
 
 | Component         | Prop            | Description                                                              |
 | ----------------- |:---------------:| :----------------------------------------------------------------------- |
