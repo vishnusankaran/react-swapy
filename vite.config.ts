@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     minify: 'terser',
     lib: {
-      entry: resolve(__dirname, 'lib/index.tsx'),
+      entry: resolve(__dirname, 'src/index.tsx'),
       formats: ['es'],
       fileName: (format) => `index.${format === 'es' ? 'js' : 'min.js'}`
     },
