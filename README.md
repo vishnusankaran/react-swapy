@@ -42,7 +42,7 @@ const Component = () => {
 
 ## Props
 
-### Container
+#### ReactSwapy.Container
 
 | Prop            | Description                                                              |
 |:--------------- | :----------------------------------------------------------------------- |
@@ -51,14 +51,14 @@ const Component = () => {
 | `onSwap?`       | callback for all swapping events                                         |
 
 
-### Slot
+#### ReactSwapy.Slot
 
 | Prop            | Description                                                              |
 |:--------------- | :----------------------------------------------------------------------- |
 | `id?`           | **unique** ID for each slot. If `id` is not provided a `name` prop is must   |
 | `name?`         | **unique** name for each slot                                                |
 
-### Item
+#### ReactSwapy.Item
 
 | Prop            | Description                                                              |
 |:--------------- | :----------------------------------------------------------------------- |
