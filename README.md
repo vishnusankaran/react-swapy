@@ -46,11 +46,11 @@ const Component = () => {
 | ----------------- |:---------------:| :----------------------------------------------------------------------- |
 | Container         | `enable?`       | `default: true`. `false` for locking swaped items                        |
 | Container         | `config?`       | `default: {}`. ```js { animation: 'dynamic' \| 'spring' \| 'none' } ```  |
-| Container         | `onSwap?`       | Callback for all swapping events                                         |
+| Container         | `onSwap?`       | callback for all swapping events                                         |
 |                   |                 |                                                                          |
-| Slot              | `id?`           | Unique ID for each slot. If `id` is not provided a `name` prop is must   |
-| Slot              | `name?`         | Unique name for each slot                                                |
+| Slot              | `id?`           | **unique** ID for each slot. If `id` is not provided a `name` prop is must   |
+| Slot              | `name?`         | **unique** name for each slot                                                |
 |                   |                 |                                                                          |
-| Item              | `name`          | Unique name to identify an item in the slots                             |
+| Item              | `name`          | **unique** name to identify an item in the slots                             |
 
 
