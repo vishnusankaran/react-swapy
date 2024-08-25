@@ -1,6 +1,6 @@
 # React-Swapy
 
-A react wrapper for the swapy library by taha-sh - (https://swapy.tahazsh.com/)[https://swapy.tahazsh.com/]
+A react wrapper for the [Swapy](https://swapy.tahazsh.com/) library by [TahaSh](https://github.com/TahaSh)
 
 ## Installation
 
