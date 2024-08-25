@@ -1,4 +1,4 @@
-# React-Swapy
+# react-swapy
 
 A react wrapper for the [Swapy](https://swapy.tahazsh.com/) library by [TahaSh](https://github.com/TahaSh)
 
@@ -42,15 +42,23 @@ const Component = () => {
 
 ## Props
 
-| Component         | Prop            | Description                                                              |
-| ----------------- |:---------------:| :----------------------------------------------------------------------- |
-| Container         | `enable?`       | `default: true`. `false` for locking swaped items                        |
-| Container         | `config?`       | `default: {}`. ```js { animation: 'dynamic' \| 'spring' \| 'none' } ```  |
-| Container         | `onSwap?`       | callback for all swapping events                                         |
-|                   |                 |                                                                          |
-| Slot              | `id?`           | **unique** ID for each slot. If `id` is not provided a `name` prop is must   |
-| Slot              | `name?`         | **unique** name for each slot                                                |
-|                   |                 |                                                                          |
-| Item              | `name`          | **unique** name to identify an item in the slots                             |
+### <Container />
+| Prop            | Description                                                              |
+|:---------------:| :----------------------------------------------------------------------- |
+| `enable?`       | `default: true`. `false` for locking swaped items                        |
+| `config?`       | `default: {}`. ```js { animation: 'dynamic' \| 'spring' \| 'none' } ```  |
+| `onSwap?`       | callback for all swapping events                                         |
+
+
+### <Slot />
+| Prop            | Description                                                              |
+|:---------------:| :----------------------------------------------------------------------- |
+| `id?`           | **unique** ID for each slot. If `id` is not provided a `name` prop is must   |
+| `name?`         | **unique** name for each slot                                                |
+
+### <Item />
+| Prop            | Description                                                              |
+|:---------------:| :----------------------------------------------------------------------- |
+| `name`          | **unique** name to identify an item in the slots                             |
 
 
