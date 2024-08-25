@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# React-Swapy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A react wrapper for the swapy library by taha-sh - (https://swapy.tahazsh.com/)[https://swapy.tahazsh.com/]
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install react-swapy
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage 
+The library exports 3 components - `Container`, `Slot` and `Item`. It can be used like below:
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+import ReactSwapy from 'react-swapy'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+const Component = () => {
+  <ReactSwapy.Container className='container'>
+    <ReactSwapy.Slot id={0} className='slot'>
+      <ReactSwapy.Item className='item' name={'a'}>
+        <ItemA />
+      </ReactSwapy.Item>
+    </ReactSwapy.Slot>
+    <ReactSwapy.Slot id={1} className='slot'>
+    </ReactSwapy.Slot>
+    <ReactSwapy.Slot id={2} className='slot'>
+      <ReactSwapy.Item className='item' name={'c'}>
+        <ItemC />
+      </ReactSwapy.Item>
+    </ReactSwapy.Slot>
+    <ReactSwapy.Slot id={3} className='slot'>
+      <ReactSwapy.Item className='item' name={'d'}>
+        <ItemD />
+      </ReactSwapy.Item>
+    </ReactSwapy.Slot>
+  </ReactSwapy.Container>
+}
 ```
+
+#### Props
+
+| Component         | Prop            | Description                                                              |
+| ----------------- |:---------------:| :----------------------------------------------------------------------- |
+| Container         | `enable?`       | `default: true`. `false` for locking swaped items                        |
+| Container         | `config?`       | `default: {}`. ```js { animation: 'dynamic' \| 'spring' \| 'none' } ```  |
+| Container         | `onSwap?`       | Callback for all swapping events                                         |
+|                   |                 |                                                                          |
+| Slot              | `id?`           | Unique ID for each slot. If `id` is not provided a `name` prop is must   |
+| Slot              | `name?`         | Unique name for each slot                                                |
+|                   |                 |                                                                          |
+| Item              | `name`          | Unique name to identify an item in the slots                             |
+
+

@@ -66,3 +66,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.container {
+  border: 1px solid;
+  padding: 8px;
+  width: 600px;
+}
+
+.container > .slot {
+  border: 1px solid;
+  padding: 8px;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.container > .slot > .item {
+  background: red;
+  height: 100%;
+}
