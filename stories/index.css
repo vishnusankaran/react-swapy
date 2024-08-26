@@ -1,5 +1,5 @@
 .wrapper {
-  width: 800px;
+  width: 849px;
   border: 1px solid rgb(229 231 235 / 1);
   border-radius: 1rem;
   background: rgb(229 231 235 / 1);
@@ -10,6 +10,8 @@
 .container {
   width: 100%;
   display: grid;
+  grid-template-columns: 160px 160px 160px 160px 160px; 
+  grid-template-rows: 160px 160px 160px;
   column-gap: 8px;
   row-gap: 8px;
   box-sizing: border-box;
@@ -21,7 +23,7 @@
   border-radius: 1rem;
   /* padding: 0; */
   width: 100%;
-  height: 150px;
+  height: 160px;
   box-sizing: border-box;
   display: inline-grid;
 }
@@ -29,11 +31,15 @@
 .container > .slot-0 {
   grid-column-start: 1;
   grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .container > .slot-1 {
   grid-column-start: 1;
   grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .container > .slot-2 {
@@ -88,7 +94,20 @@
 }
 
 .container > .slot > .item-a {
-  background: #8CB369;
+  background: #FAF4D3;
+}
+
+.container > .slot > .item-b {
+  background: #89D2DC;
+  cursor: auto;
+  cursor: -moz-auto;
+  cursor: -webkit-auto;
+}
+
+.container > .slot > .item-b:active {
+  cursor: auto;
+  cursor: -moz-auto;
+  cursor: -webkit-auto;
 }
 
 .container > .slot > .item-c {
@@ -105,4 +124,51 @@
 
 .container > .slot > .item-g {
   background: #BC4B51;
+}
+
+.container .slot button.test-1 {
+  padding: 0.25rem 0.75rem;
+  font-size: 24px;
+  background: #fff;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.container .slot span.test-2 {
+  padding: 1rem;
+  font-size: 32px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 0.5;
+}
+
+.b-wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.b-1 {
+  background: #FFDDE1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 0 1rem 1rem 0;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.b-1:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.b-2 {
+  flex-grow: 1;
+  text-align: center;
 }

@@ -7,27 +7,31 @@ const DEFAULT: (string | null)[] = ['a', null, 'c', 'd', null, 'f', 'g']
 const A = () => {
   const [count, setCount] = useState(0)
 
-  return <div className='test-1' onClick={() => setCount(count + 1)}>{count}</div>
+  return (<div className='test-wrapper'>
+    <button className='test-1' onClick={() => setCount(count >= 1 ? count - 1 : count)}>-</button>
+    <span className='test-2'>{count}</span>
+    <button className='test-1' onClick={() => setCount(count + 1)}>+</button>
+  </div>)
 }
 
 function getItemById(itemId: string | null) {
   return itemId ? <ReactSwapy.Item className={`item item-${itemId}`} name={itemId}>{itemId}</ReactSwapy.Item> : itemId
 }
 
-export const ReactSwapyComponent = () => {
+export const ReactSwapyComponent = ({ enable, onSwap, config }) => {
   return (
     <div className="wrapper">
-      <ReactSwapy.Container className='container'>
+      <ReactSwapy.Container enable={enable} onSwap={onSwap} config={config} className='container'>
         <ReactSwapy.Slot id={0} className={`slot slot-${0}`}>
           <ReactSwapy.Item className='item item-a' name={'a'}>
-            <div className='test-wrapper'>
-              <A />
-              <div className='test-2' />
-            </div>
+            <A />
           </ReactSwapy.Item>
         </ReactSwapy.Slot>
         <ReactSwapy.Slot id={1} className={`slot slot-${1}`}>
-          {getItemById(DEFAULT[1])}
+          <ReactSwapy.Item className={`item item-b`} name={'b'}>
+            <div className='b-2'>b</div>
+            <ReactSwapy.Handle className='b-1'>|||</ReactSwapy.Handle>
+          </ReactSwapy.Item>
         </ReactSwapy.Slot>
         <ReactSwapy.Slot id={2} className={`slot slot-${2}`}>
           {getItemById(DEFAULT[2])}
@@ -45,6 +49,6 @@ export const ReactSwapyComponent = () => {
           {getItemById(DEFAULT[6])}
         </ReactSwapy.Slot>
       </ReactSwapy.Container>
-    </div>
+    </div >
   );
 };
