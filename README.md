@@ -2,6 +2,10 @@
 
 A react wrapper for the [Swapy](https://swapy.tahazsh.com/) library by [TahaSh](https://github.com/TahaSh)
 
+# Demo
+
+[Storybook](https://66cb8472f3d66518c09049a8-kgsqqsclqv.chromatic.com/)
+
 ## Installation
 
 ```bash
