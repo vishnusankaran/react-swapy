@@ -69,3 +69,6 @@ const Component = () => {
 | `name`          | **unique** name to identify an item in the slots                             |
 
 
+## Disclaimer
+
+This library is not extensively tested. If you find issues, please raise it [here in Github Issues](https://github.com/vishnusankaran/react-swapy/issues)
