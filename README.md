@@ -13,7 +13,7 @@ npm install react-swapy -S
 ```
 
 ## Usage 
-The library exports 3 components - `Container`, `Slot` and `Item`. It can be used like below:
+The library exports 4 components - `Container`, `Slot`, `Item` and `Handle`. It can be used like below:
 
 ```js
 import ReactSwapy from 'react-swapy'
@@ -28,7 +28,8 @@ const Component = () => {
     <ReactSwapy.Slot id={1} className='slot'>
     </ReactSwapy.Slot>
     <ReactSwapy.Slot id={2} className='slot'>
-      <ReactSwapy.Item className='item' name={'c'}>
+      <ReactSwapy.Item>
+        <ReactSwapy.Handle className='handle'>|||</ReactSwapy.Handle>
         <ItemC />
       </ReactSwapy.Item>
     </ReactSwapy.Slot>
